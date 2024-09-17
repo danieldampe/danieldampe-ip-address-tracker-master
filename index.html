@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <!-- leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- normalize.css -->
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <!-- Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <!-- index.css -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 60;
+      width: 100%;
+      padding: .5rem;
+      font-size: 11px; 
+      text-align: center;
+      color: black; 
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="ip-address-tracker">
+      <div class="container">
+        <h1 class="main-title">IP Address Tracker</h1>
+        <form class="form" id="ip-address-tracker-form">
+          <input 
+            class="input"
+            type="text" 
+            name="ip"
+            placeholder="Search for any IP address or domain"
+          >
+          <button class="btn-submit" type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <div class="details">
+          <div class="info">
+            <h2 class="title">IP Address</h2>
+            <div class="output" id="ip-address"></div>
+          </div>
+          <div class="info">
+            <h2 class="title">Location</h2>
+            <div class="output" id="location"></div>
+          </div>
+          <div class="info">
+            <h2 class="title">Timezone</h2>
+            <div class="output" id="timezone"></div>
+          </div>
+          <div class="info">
+            <h2 class="title">ISP</h2>
+            <div class="output" id="isp"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./images/pattern-bg-desktop.png">
+        <img class="background-image" src="./images/pattern-bg-mobile.png" alt="">
+      </picture>
+      <div id="map" class="map"></div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/danieldampe">danieldampe</a>.
+    </div>
+  </div>
+  <!-- umbrella -->
+  <script src="https://cdn.jsdelivr.net/npm/umbrellajs"></script>
+  <!-- index.js -->
+  <script src="./index.js"></script>
+</body>
+</html>

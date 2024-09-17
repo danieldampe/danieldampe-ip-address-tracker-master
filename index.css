@@ -1,0 +1,148 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+h1, h2 { margin: 0; }
+
+img { 
+  display: block; 
+  width: 100%;
+}
+
+input, button { border: 0; }
+
+button { padding: 0; }
+
+:root {
+  --color-dark-gray: hsl(0, 0%, 17%);
+  --color-gray: hsl(0, 0%, 59%);
+  font-family: "Rubik", system-ui;
+  color: white;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+.ip-address-tracker {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-inline: 1.5rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.75rem;
+    max-width: 1115px;
+    margin-inline: auto;
+  }
+}
+
+.main-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 555px;
+  margin-inline: auto;
+  border-radius: .9rem;
+  overflow: hidden;
+
+  .input {
+    width: 10em;
+    flex-grow: 1;
+    padding-inline: 1.5rem;
+    padding-block: 1.125rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-submit {
+    width: 3.5rem;
+    background-color: black;
+    cursor: pointer;
+
+    &:hover { background-color: #3f3f3f; }
+
+    .icon-arrow {
+      font-size: 1.25rem;
+      color: white;
+    }
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 1.75rem;
+  background-color: white;
+  border-radius: .9rem;
+}
+
+.info {
+  text-align: center;
+  color: black;
+
+  .title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .55rem;
+    color: #a1a1a1;
+    letter-spacing: .25em;
+  }
+
+  .output {
+    margin-top: .5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark-gray);
+  }
+}
+
+.background {
+  position: relative;
+  z-index: 40;
+}
+
+.map {
+  height: 530px;
+}
+
+.background-image { max-height: 490px; }
+
+@media (min-width: 1000px) {
+  .ip-address-tracker {
+    padding-top: 1.8rem;
+
+    .container { row-gap: 1.9rem; }
+  }
+
+  .main-title { font-size: 1.95rem; }
+
+  .details {
+    flex-direction: row;
+    margin-top: 1rem;
+    padding-block: 2.6rem;
+    padding-inline: 0;
+
+    .info {
+      width: calc(100% / 4);
+      padding-inline: 2rem;
+      border-right: .125rem solid #e2e2e2;
+      text-align: left;
+
+      .title { font-size: .7rem; }
+
+      .output { 
+        margin-top: .75rem;
+        font-size: 1.5rem; 
+      }
+    }
+  }
+}
