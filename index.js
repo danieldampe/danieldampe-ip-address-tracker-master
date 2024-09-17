@@ -9,7 +9,7 @@ const getData = async (query = '') => {
   const fields = 33612788
   const IP_API = `https://geo.ipify.org/api/v2/country,city?apiKey=at_JJFz5kDkHoe1vA0GwlhuOIzYENDXD${query !== '' ? `&ipAddress=${query}` : ''}`
   const response = await fetch(IP_API)
-  if (!response.ok) return Promise.reject('cascscas')
+  if (!response.ok) return Promise.reject('something wrong')
   const data = await response.json()
   return data
 }
